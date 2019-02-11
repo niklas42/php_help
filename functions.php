@@ -1,3 +1,23 @@
+<!-- <select id="rez" name="rezept">
+    <?php
+    $teilstring = $_POST['rname'];
+    $teilstring = '%'.$teilstring.'%';
+    $query = 'select * from rezeptname
+                where rez_name like ?
+                order by rez_name';
+    $stmt = $con->prepare($query);
+    $stmt->bindParam(1, $teilstring);
+    $stmt->execute();
+    while($row = $stmt->fetch(PDO::FETCH_NUM))
+    {
+        echo '<option value="'.$row[0].'">'.$row[1];
+    }
+    ?>
+</select> -->
+
+
+
+
 <?php
 function showTable($con, $query, $bindArray = null) {
     $stmt = $con->prepare($query);
